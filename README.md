@@ -13,7 +13,7 @@ npm run dev
 
 - Store: http://localhost:5173
 - Admin: http://localhost:5173/admin
-- Local preview password: `vexoria-local-preview`
+- Local preview password: `generated on startup (or set VEXORIA_LOCAL_PASSWORD)`
 
 The dev server binds only to your computer. It stores local products, uploaded photos, settings, and orders in `.local-data/`, which is excluded from Git. Restarting the server retains the data but signs out existing admin sessions. This preview password is only created by the local development script; production has no default password.
 
