@@ -1,0 +1,23 @@
+/* A decorative layer underneath the storefront, clear of all click targets. */
+body { isolation: isolate; }
+.coffee-background {
+  position: fixed;
+  z-index: -1;
+  right: -3vw;
+  top: 15vh;
+  width: clamp(300px, 43vw, 640px);
+  pointer-events: none;
+  user-select: none;
+  opacity: .22;
+  contain: layout style;
+  will-change: transform;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 26%, transparent 71%);
+  mask-image: radial-gradient(ellipse at center, #000 26%, transparent 71%);
+}
+.coffee-background img { width: 100%; height: auto; }
+@media (max-width: 640px) {
+  .coffee-background { width: 82vw; right: -20vw; top: 24vh; opacity: .15; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coffee-background { will-change: auto; transform: none !important; }
+}
